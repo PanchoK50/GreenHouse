@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    
+    background: rgb(36, 38, 37);
+    /*background: fixed linear-gradient(132deg, rgba(45,45,45,1) 0%, rgb(11, 49, 50) 64%, rgb(22, 58, 35) 100%);*/
+    
+    font-family: system-ui, Arial, Helvetica, sans-serif;
+
+    /*height: 200vh;*/
+}
+
+.container {
+    max-width: 1200;
+    width: 90%;
+
+    margin: auto;
+}
+
+.inline {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+
+    padding: .5rem 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+
+    backdrop-filter: blur(10px);
+
+    z-index: 1000;
+}
+
+.logo {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: -3px;
+}
+
+.card {
+    border-radius: 15px;
+
+    box-shadow: 0px -1px 2px rgba(64, 64, 64, 0.1), 
+                0px 2px 4px rgba(0, 0, 0, 0.1), 
+                0px 4px 8px rgba(0, 0, 0, 0.1), 
+                0px 8px 16px rgba(0, 0, 0, 0.1);
+
+    padding: .5rem;
+
+    background: rgba(0, 0, 0, 0.3);
+
+    color: white;
+}
+
+.card.invert {
+    box-shadow: inset 0px -1px 2px rgba(64, 64, 64, 0.1), 
+                inset 0px 2px 4px rgba(0, 0, 0, 0.1), 
+                inset 0px 4px 8px rgba(0, 0, 0, 0.1), 
+                inset 0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.nav {
+    color: gray;
+    font-weight: 600;
+
+    font-size: 1.2rem;
+
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem 0 3rem 0;
+}
+
+.nav > .link {
+    border-radius: 10px;
+    padding: .3rem 1rem;
+}
+
+.nav > .link.active {
+    color: black;
+    background: #18ad3b; /* rgba(0, 255, 0, 0.4); */
+
+    box-shadow: 0px -1px 2px rgba(64, 64, 64, 0.1), 
+                0px 2px 4px rgba(0, 0, 0, 0.1), 
+                0px 4px 8px rgba(0, 0, 0, 0.1), 
+                0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
