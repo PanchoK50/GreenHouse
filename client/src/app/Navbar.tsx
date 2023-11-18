@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 function Navbar() {
 
-    const [activeButton, setActiveButton] = useState('button0');
+    const [activeButton, setActiveButton] = useState('button1');
 
     const handleButtonClick = (buttonId: string) => {
       console.log('Button clicked: ', buttonId)
@@ -14,22 +14,22 @@ function Navbar() {
 
   return (
     <>
-      <div className="nav container">
+      <div className="nav inline">
 
       <Link href="/" className={`link ${activeButton === 'button1' ? 'active' : ''}`} onClick={() => handleButtonClick('button1')}>
-        Button 1
+        Dash
       </Link>
 
       <Link href="/" className={`link ${activeButton === 'button2' ? 'active' : ''}`} onClick={() => handleButtonClick('button2')}>
-        Button 2
+        Plan
       </Link>
 
       <Link href="/" className={`link ${activeButton === 'button3' ? 'active' : ''}`} onClick={() => handleButtonClick('button3')}>
-        Button 3
+        Rewards
       </Link>
 
       <Link href="/" className={`link ${activeButton === 'button4' ? 'active' : ''}`} onClick={() => handleButtonClick('button4')}>
-        Button 4
+        Facts
       </Link>
     
       </div>
