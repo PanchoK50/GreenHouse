@@ -2,11 +2,11 @@ body {
     margin: 0;
     
     background: rgb(36, 38, 37);
-    /*background: fixed linear-gradient(132deg, rgba(45,45,45,1) 0%, rgb(11, 49, 50) 64%, rgb(22, 58, 35) 100%);*/
+    background: fixed linear-gradient(135deg, #a1eded 0%, #bbec9c 100%);
     
     font-family: system-ui, Arial, Helvetica, sans-serif;
 
-    /*height: 200vh;*/
+    height: 200vh;
 }
 
 .container {
@@ -25,12 +25,15 @@ body {
 
 .header {
     position: sticky;
-    top: 0;
+    margin: .5rem;
+
+    top: 0.5rem;
+
+    border-radius: 15px;
 
     padding: .5rem 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.2);
     color: white;
-    
 
     backdrop-filter: blur(10px);
 
@@ -76,7 +79,9 @@ body {
 }
 
 .nav > .link {
-    color: rgb(128, 128, 128);
+    --col: rgb(95, 95, 95);
+
+    color: var(--col);
     text-decoration: none;
 
     border-radius: 10px;
@@ -89,18 +94,28 @@ body {
 .nav > .link:hover,
 .nav > .link:focus,
 .nav > .link:visited {
-    color: rgb(128, 128, 128);
+    color: var(--col);
 }
 
 .nav > .link.active {
-    color: black;
-    background: #18ad3b; /* rgba(0, 255, 0, 0.4); */
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
 
     box-shadow: 0 -1px 2px rgba(64, 64, 64, 0.1),
                 0 2px 4px rgba(0, 0, 0, 0.1),
                 0 4px 8px rgba(0, 0, 0, 0.1),
                 0 8px 16px rgba(0, 0, 0, 0.1);
 }
+
+/* .nav > .link:not(.active) {
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+
+    box-shadow: inset 0 -1px 2px rgba(64, 64, 64, 0.1),
+                inset 0 2px 4px rgba(0, 0, 0, 0.1),
+                inset 0 4px 8px rgba(0, 0, 0, 0.1),
+                inset 0 8px 16px rgba(0, 0, 0, 0.1);
+}*/
 
 h1, h2, h3, p {
     margin: 0;

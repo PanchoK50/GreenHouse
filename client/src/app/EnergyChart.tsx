@@ -1,5 +1,4 @@
 "use client"
-import Script from 'next/script';
 import React from 'react'
 import {
   Chart,
@@ -34,7 +33,7 @@ const options = {
 
   scales: {
     y: {
-      beginAtZero: true,
+      //beginAtZero: true,
       border: {
         display: false,
         color: "gray",
@@ -72,10 +71,10 @@ const options = {
 };
 
 var defaultData = {
-  labels: ["01", "05", "10", "15", "20", "25"],
+  labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
   datasets: [
     {
-      data: [12, 19, 3, 5, 2, 3],
+      data: [12, 19, 15, 16, 20, 13, 17],
       borderWidth: 3,
       borderColor: "#18ad3b",
     },

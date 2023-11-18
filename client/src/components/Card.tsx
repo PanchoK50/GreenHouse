@@ -4,7 +4,7 @@ import React from "react";
 import card from "../styles/card.module.scss";
 
 export default function Card(
-    { children, invert = false, style }:
+    { children, invert = false, style = {} }:
     { children: React.ReactNode, invert: boolean, style: object }
 ) {
     return (
@@ -13,7 +13,3 @@ export default function Card(
         </div>
     );
 }
-
-Card.defaultProps = {
-    style: {}
-};

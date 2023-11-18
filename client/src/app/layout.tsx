@@ -7,6 +7,7 @@ config.autoAddCss = false;
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import '../../../style_template/style.css'
 import Navbar from './Navbar'
+import Container from "@/components/Container";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -24,10 +25,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Header />
-        <div className='container'>
+        <Container>
           <Navbar />
           {children}
-        </div>
+        </Container>
       </body>
     </html>
   );
