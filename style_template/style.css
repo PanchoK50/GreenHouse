@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-    max-width: 1200;
+    max-width: 1200px;
     width: 90%;
 
     margin: auto;
@@ -66,7 +66,6 @@ body {
 }
 
 .nav {
-    color: gray;
     font-weight: 600;
 
     font-size: 1.2rem;
@@ -77,18 +76,30 @@ body {
 }
 
 .nav > .link {
+    color: rgb(128, 128, 128);
+    text-decoration: none;
+
     border-radius: 10px;
     padding: .3rem 1rem;
+
+    transition: background-color .3s ease-in-out, color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.nav > .link:active,
+.nav > .link:hover,
+.nav > .link:focus,
+.nav > .link:visited {
+    color: rgb(128, 128, 128);
 }
 
 .nav > .link.active {
     color: black;
     background: #18ad3b; /* rgba(0, 255, 0, 0.4); */
 
-    box-shadow: 0px -1px 2px rgba(64, 64, 64, 0.1), 
-                0px 2px 4px rgba(0, 0, 0, 0.1), 
-                0px 4px 8px rgba(0, 0, 0, 0.1), 
-                0px 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -1px 2px rgba(64, 64, 64, 0.1),
+                0 2px 4px rgba(0, 0, 0, 0.1),
+                0 4px 8px rgba(0, 0, 0, 0.1),
+                0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 h1, h2, h3, p {

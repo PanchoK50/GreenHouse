@@ -25,8 +25,13 @@ Chart.register(
 );
 
 import { Line } from "react-chartjs-2";
+import Card from "@/components/Card";
 
 const options = {
+  responsive: true,
+  maintainAspectRatio: false,
+  resizeDelay: 0,
+
   scales: {
     y: {
       beginAtZero: true,
@@ -79,13 +84,13 @@ var defaultData = {
 
 
 function EnergyChart() {
-return (
-  <>
-    <div className="card invert" style={{ height: "13rem" }}>
-      <Line id="chart" data={defaultData} height={200} options={options} />
-    </div>
-  </>
-);
+  return (
+    <>
+      <Card invert={true} style={{ height: "15rem" }}>
+        <Line id="chart" data={defaultData} options={options} />
+      </Card>
+    </>
+  );
 }
 
 export default EnergyChart

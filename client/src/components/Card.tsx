@@ -1,12 +1,19 @@
 'use client'
 
 import React from "react";
-import '../styles/card.module.scss';
+import card from "../styles/card.module.scss";
 
-export default function Card({ children, invert }: { children: React.ReactNode, invert: boolean }) {
+export default function Card(
+    { children, invert = false, style }:
+    { children: React.ReactNode, invert: boolean, style: object }
+) {
     return (
-        <div className={`card${invert ? ' invert' : ''}`}>
+        <div className={`${card.card} ${invert ? card.invert : ''}`} style={style}>
             { children }
         </div>
     );
 }
+
+Card.defaultProps = {
+    style: {}
+};
