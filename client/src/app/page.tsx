@@ -7,6 +7,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
+      <div className='container'>
         <EnergyChart />
 
         <Card style={{ marginTop: "1rem" }}>
@@ -30,6 +31,7 @@ export default function Home() {
                 </div>
             </div>
         </Card>
+        </div>
     </>
   );
 }
