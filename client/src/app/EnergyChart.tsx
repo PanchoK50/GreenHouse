@@ -76,7 +76,7 @@ var defaultData = {
     {
       data: [12, 19, 15, 16, 20, 13, 17],
       borderWidth: 3,
-      borderColor: "#18ad3b",
+      borderColor: "#007f21",
     },
   ],
 };
