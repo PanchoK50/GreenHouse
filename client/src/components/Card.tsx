@@ -13,3 +13,8 @@ export default function Card(
         </div>
     );
 }
+
+Card.defaultProps = {
+    invert: false,
+    style: {}
+}
