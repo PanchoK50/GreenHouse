@@ -47,11 +47,11 @@ function Navbar() {
         Plan
       </Link> */}
 
-      <Link href="/rewards" className={`link ${activeButton === 'button3' ? 'active' : ''}`} onClick={() => handleButtonClick('button3')}>
+      <Link href="/rewards" className={`link textMedium ${activeButton === 'button3' ? 'active' : ''}`} onClick={() => handleButtonClick('button3')}>
         Rewards
       </Link>
 
-      <Link href="/facts" className={`link ${activeButton === 'button4' ? 'active' : ''}`} onClick={() => handleButtonClick('button4')}>
+      <Link href="/facts" className={`link textMedium ${activeButton === 'button4' ? 'active' : ''}`} onClick={() => handleButtonClick('button4')}>
         Facts
       </Link>
     
