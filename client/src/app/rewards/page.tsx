@@ -24,13 +24,13 @@ export default function Page() {
                 <div className="inline left">
                     <FontAwesomeIcon className="dropShadow" icon={faPersonBiking} style={{ fontSize: "3rem", marginRight: "2rem" }} />
                     <div style={{ flexGrow: "1" }}>
-                        <h1>MVG-Rad</h1>
-                        <p className="altText" style={{ fontSize: "1.5rem" }}>30 free minutes of MVG-Rad</p>
+                        <h1 className="textBig">MVG-Rad</h1>
+                        <p className="altText textSmall">30 free minutes of MVG-Rad</p>
                         <div className="inline" style={{ marginTop: "1.5rem" }}>
-                            <span style={{ fontSize: "1.5rem" }}>
+                            <span className="textMedium">
                                 100 <FontAwesomeIcon icon={faEarth} style={{ color: "#037244" }} />
                             </span>
-                            <button className="redeem" onClick={togglePopup}>
+                            <button className="redeem textSmall" onClick={togglePopup}>
                                 Redeem
                             </button>
                         </div>
@@ -41,13 +41,13 @@ export default function Page() {
                 <div className="inline left">
                     <FontAwesomeIcon className="dropShadow" icon={faBuildingColumns} style={{ fontSize: "3rem", marginRight: "2rem" }} />
                     <div style={{ flexGrow: "1" }}>
-                        <h1>Museum Ticket</h1>
-                        <p className="altText" style={{ fontSize: "1.5rem" }}>One month free entry to any museum in Munich</p>
+                        <h1 className="textBig">Museum Ticket</h1>
+                        <p className="altText textSmall">One month free entry to any museum in Munich</p>
                         <div className="inline" style={{ marginTop: "1.5rem" }}>
-                                <span style={{ fontSize: "1.5rem" }}>
-                                    825 <FontAwesomeIcon icon={faEarth} style={{ color: "#037244" }} />
-                                </span>
-                            <button className="redeem lock" style={{ width: "6rem" }}>
+                            <span className="textMedium">
+                                825 <FontAwesomeIcon icon={faEarth} style={{ color: "#037244" }} />
+                            </span>
+                            <button className="redeem lock textSmall" style={{ width: "6rem" }}>
                                 <FontAwesomeIcon icon={faLock} />
                             </button>
                         </div>
@@ -58,13 +58,13 @@ export default function Page() {
                 <div className="inline left">
                     <FontAwesomeIcon className="dropShadow" icon={faArchway} style={{ fontSize: "3rem", marginRight: "2rem" }} />
                     <div style={{ flexGrow: "1" }}>
-                        <h1>Sewer Tour</h1>
-                        <p className="altText" style={{ fontSize: "1.5rem" }}>A guided tour through the Munich Sewers</p>
+                        <h1 className="textBig">Sewer Tour</h1>
+                        <p className="altText textSmall">A guided tour through the Munich Sewers</p>
                         <div className="inline" style={{ marginTop: "1.5rem" }}>
-                                <span style={{ fontSize: "1.5rem" }}>
-                                    2500 <FontAwesomeIcon icon={faEarth} style={{ color: "#037244" }} />
-                                </span>
-                            <button className="redeem lock" style={{ width: "6rem" }}>
+                            <span className="textMedium">
+                                2500 <FontAwesomeIcon icon={faEarth} style={{ color: "#037244" }} />
+                            </span>
+                            <button className="redeem lock textSmall" style={{ width: "6rem" }}>
                                 <FontAwesomeIcon icon={faLock} />
                             </button>
                         </div>

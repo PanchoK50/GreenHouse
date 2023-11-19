@@ -85,7 +85,7 @@ var defaultData = {
 function EnergyChart() {
   return (
     <>
-      <Card invert={true} style={{ height: "15rem", animation: "none", opacity: 1, transform: "initial" }}>
+      <Card invert={true} style={{ height: "12rem", animation: "none", opacity: 1, transform: "initial" }}>
         <Line id="chart" data={defaultData} options={options} />
       </Card>
     </>

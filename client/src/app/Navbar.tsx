@@ -16,19 +16,19 @@ function Navbar() {
     <>
       <div className="nav inline">
 
-      <Link href="/" className={`link ${activeButton === 'button1' ? 'active' : ''}`} onClick={() => handleButtonClick('button1')}>
+      <Link href="/" className={`link textMedium ${activeButton === 'button1' ? 'active' : ''}`} onClick={() => handleButtonClick('button1')}>
         Dash
       </Link>
 
-      <Link href="/" className={`link ${activeButton === 'button2' ? 'active' : ''}`} onClick={() => handleButtonClick('button2')}>
+      <Link href="/" className={`link textMedium ${activeButton === 'button2' ? 'active' : ''}`} onClick={() => handleButtonClick('button2')}>
         Plan
       </Link>
 
-      <Link href="/" className={`link ${activeButton === 'button3' ? 'active' : ''}`} onClick={() => handleButtonClick('button3')}>
+      <Link href="/" className={`link textMedium ${activeButton === 'button3' ? 'active' : ''}`} onClick={() => handleButtonClick('button3')}>
         Rewards
       </Link>
 
-      <Link href="/" className={`link ${activeButton === 'button4' ? 'active' : ''}`} onClick={() => handleButtonClick('button4')}>
+      <Link href="/" className={`link textMedium ${activeButton === 'button4' ? 'active' : ''}`} onClick={() => handleButtonClick('button4')}>
         Facts
       </Link>
     
