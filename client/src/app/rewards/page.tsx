@@ -28,7 +28,6 @@ function CopyToClipboardButton({ text } : { text: string }) {
   const handleCopyClick = async () => {
     try {
       await navigator.clipboard.writeText(text);
-      alert("Copied to clipboard!");
     } catch (error) {
       console.error("Unable to copy to clipboard", error);
       // Handle the error accordingly
