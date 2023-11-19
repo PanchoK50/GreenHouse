@@ -100,7 +100,7 @@ export default function Home() {
             </div>
         </Card>
 
-        <Card style={{ marginTop: "2rem", padding: "0.75rem 1rem", animationDelay: ".3s" }}>
+        <Card style={{ marginTop: "1rem", padding: "0.75rem 1rem", animationDelay: ".3s" }}>
           <div className="inline">
                 <div>
                     <h1 className="textBig">{getNumberForInfo(infoIndex)}</h1>

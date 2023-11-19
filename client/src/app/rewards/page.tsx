@@ -35,7 +35,7 @@ function CopyToClipboardButton({ text } : { text: string }) {
   };
 
   return <div style={{userSelect: "none"}} onClick={handleCopyClick}>
-    <div className="code">{codeToCopy}</div>
+    <div className="code textMedium">{codeToCopy}</div>
   </div>;
 }
 
@@ -105,17 +105,17 @@ export default function Page() {
               position: "relative",
             }}
           >
-            <h1 style={{ color: "#037244" }}>Claim your reward!</h1>
-            <p style={{ marginTop: "1rem", fontSize: "1.2rem" }}>
+            <h1 className="textBig" style={{ color: "#037244" }}>Claim your reward!</h1>
+            <p className="textMedium" style={{ marginTop: "1rem" }}>
               You have activated the reward: MVG-Rad. Go claim your free minutes
               now!
             </p>
                 <CopyToClipboardButton text={codeToCopy} />
             
             <div style={{ textAlign: "center" }}>
-              <span style={{ color: "darkgray" }}>Not an actual code :c</span>
+              <span className="textSmall" style={{ color: "darkgray" }}>Not an actual code :c</span>
             </div>
-            <button className="buttonClose" onClick={togglePopup}>
+            <button className="buttonClose textMedium" onClick={togglePopup}>
               Close
             </button>
           </div>
