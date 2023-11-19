@@ -1,5 +1,5 @@
-"use client"
-import React from 'react'
+"use client";
+import React from "react";
 import {
   Chart,
   CategoryScale,
@@ -34,6 +34,11 @@ const options = {
   scales: {
     y: {
       //beginAtZero: true,
+      title: {
+        display: true,
+        text: "kWh", // Set the y-axis label to kWh
+        color: "white", // You can customize the color
+      },
       border: {
         display: false,
         color: "gray",
@@ -70,26 +75,24 @@ const options = {
   },
 };
 
-var defaultData = {
-  labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-  datasets: [
-    {
-      data: [12, 19, 15, 16, 20, 13, 17],
-      borderWidth: 3,
-      borderColor: "#007f21",
-    },
-  ],
-};
+interface ChartData {
+  labels: string[];
+  datasets: {
+    data: number[];
+    borderWidth: number;
+    borderColor: string;
+  }[];
+}
 
 
-function EnergyChart() {
+function EnergyChart({ data }: { data: ChartData }) {
   return (
     <>
       <Card invert={true} style={{ height: "15rem" }}>
-        <Line id="chart" data={defaultData} options={options} />
+        <Line id="chart" data={data} options={options} />
       </Card>
     </>
   );
 }
 
-export default EnergyChart
+export default EnergyChart;
