@@ -6,8 +6,6 @@ body {
     background-attachment: fixed;
     
     font-family: "Varela Round", system-ui, Arial, Helvetica, sans-serif;
-
-    height: 200vh;
 }
 
 .container {
@@ -54,10 +52,10 @@ body {
 .card {
     border-radius: 15px;
 
-    box-shadow: 0px -1px 2px rgba(64, 64, 64, 0.1), 
-                0px 2px 4px rgba(0, 0, 0, 0.1), 
-                0px 4px 8px rgba(0, 0, 0, 0.1), 
-                0px 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -1px 2px rgba(64, 64, 64, 0.1),
+                0 2px 4px rgba(0, 0, 0, 0.1),
+                0 4px 8px rgba(0, 0, 0, 0.1),
+                0 8px 16px rgba(0, 0, 0, 0.1);
 
     padding: .5rem;
 
@@ -67,10 +65,10 @@ body {
 }
 
 .card.invert {
-    box-shadow: inset 0px -1px 2px rgba(64, 64, 64, 0.1), 
-                inset 0px 2px 4px rgba(0, 0, 0, 0.1), 
-                inset 0px 4px 8px rgba(0, 0, 0, 0.1), 
-                inset 0px 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 -1px 2px rgba(64, 64, 64, 0.1),
+                inset 0 2px 4px rgba(0, 0, 0, 0.1),
+                inset 0 4px 8px rgba(0, 0, 0, 0.1),
+                inset 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .nav {
@@ -169,6 +167,75 @@ h1, h2, h3, h3, a, p, span {
     opacity: 0;
     transform: translate(50%, 50%);
     animation: slide-in 0.3s forwards ease-out;
+}
+
+.rewardsPopup {
+    position: absolute;
+    background: rgba(0, 0, 0, .5);
+
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1020;
+
+    backdrop-filter: blur(10px);
+}
+
+.rewardsPopup.hidden {
+    display: none;
+}
+
+.rewardsInner {
+    position: absolute;
+
+    background: white;
+    border-radius: 20px;
+
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    height: fit-content;
+
+    max-width: 1200px;
+
+    transform: translate(-50%, -50%);
+}
+
+.buttonClose {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+
+    font: inherit;
+    font-size: 1.5rem;
+
+    color: white;
+
+    font-weight: bold;
+    background-color: #037244;
+
+    padding: .75rem 1.5rem;
+
+    outline: none;
+    border: none;
+
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.code {
+    margin-top: 2rem;
+
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    border-radius: 14px;
+
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+
+    letter-spacing: 3px;
 }
 
 @keyframes slide-in {
