@@ -4,6 +4,7 @@ body {
 
     background-image: linear-gradient(135deg, #a1eded 0%, #bbec9c 100%);
     background-repeat: no-repeat;
+    background-attachment: fixed;
 
     min-height: 100vh;
 }
@@ -12,7 +13,7 @@ body {
     max-width: 1200px;
     width: 90%;
 
-    margin: auto;
+    margin: auto auto 2rem;
 }
 
 .inline {
