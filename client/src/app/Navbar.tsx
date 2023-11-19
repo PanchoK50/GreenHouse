@@ -39,7 +39,7 @@ function Navbar() {
   return (
       <div className="nav inline">
 
-      <Link href="/" className={`link ${activeButton === 'button1' ? 'active' : ''}`} onClick={() => handleButtonClick('button1')}>
+      <Link href="/" className={`link textMedium ${activeButton === 'button1' ? 'active' : ''}`} onClick={() => handleButtonClick('button1')}>
         Dash
       </Link>
 

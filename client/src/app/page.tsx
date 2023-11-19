@@ -41,19 +41,19 @@ export default function Home() {
     <>
         <EnergyChart data={defaultData} />
 
-        <Card style={{ marginTop: "1rem" }}>
-            <div className="inline" style={{ padding: "0.5rem 2rem" }}>
+        <Card style={{ marginTop: "1rem", padding: "0.75rem 1rem" }}>
+            <div className="inline">
                 <div>
-                    <h1 style={{ fontSize: "2.5rem" }}>{totalKWh.toFixed(1)} kWh</h1>
-                    <h3 className="altText" style={{ marginTop: ".5rem" }}>{generateRandomValue(25, 2.34).toFixed(1)}% less than last week</h3>
+                    <h1 className="textBig">43 kWh</h1>
+                    <h3 className="altText textMedium" style={{ marginTop: ".5rem" }}>30% less than last week</h3>
                 </div>
-                <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+                <div style={{ display: "flex", justifyContent: "center", alignItems: "center", padding: "0 .5rem" }}>
                     <FontAwesomeIcon icon={faDownLong} style={{ fontSize: "3rem", color: "#037244" }} />
                 </div>
             </div>
         </Card>
 
-        <Card style={{ marginTop: "2rem", padding: "0.5rem 2rem", animationDelay: ".3s" }}>
+        {/*<Card style={{ marginTop: "2rem", padding: "0.75rem 1rem", animationDelay: ".3s" }}>
             <h1>Tip of the day:</h1>
             <div className="inline" style={{ alignItems: "stretch", marginTop: "1rem" }}>
                 <img src="/tree.svg" alt="Tree" style={{ width: "6rem" }} />
@@ -61,7 +61,7 @@ export default function Home() {
                     <h2>Hello World!</h2>
                 </div>
             </div>
-        </Card>
+        </Card>*/}
     </>
   );
 }
