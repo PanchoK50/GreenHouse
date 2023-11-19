@@ -51,18 +51,6 @@ export default function Home() {
                     <FontAwesomeIcon icon={faDownLong} style={{ fontSize: "3rem", color: "#037244" }} />
                 </div>
             </div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <FontAwesomeIcon
-                icon={faDownLong}
-                style={{ fontSize: "3rem", color: "green" }}
-              />
-            </div>
         </Card>
 
         <Card style={{ marginTop: "2rem", padding: "0.5rem 2rem", animationDelay: ".3s" }}>
