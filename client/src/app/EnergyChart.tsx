@@ -76,7 +76,7 @@ var defaultData = {
     {
       data: [12, 19, 15, 16, 20, 13, 17],
       borderWidth: 3,
-      borderColor: "#007f21",
+      borderColor: "#037244",
     },
   ],
 };
@@ -85,7 +85,7 @@ var defaultData = {
 function EnergyChart() {
   return (
     <>
-      <Card invert={true} style={{ height: "15rem" }}>
+      <Card invert={true} style={{ height: "15rem", animation: "none", opacity: 1, transform: "initial" }}>
         <Line id="chart" data={defaultData} options={options} />
       </Card>
     </>

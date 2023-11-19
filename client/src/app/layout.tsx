@@ -23,6 +23,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css?family=Varela%20Round" />
+      </head>
       <body className={inter.className}>
         <Header />
         <Container>

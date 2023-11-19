@@ -8,7 +8,7 @@ export default function Card(
     { children: React.ReactNode, invert: boolean, style: object }
 ) {
     return (
-        <div className={`${card.card} ${invert ? card.invert : ''}`} style={style}>
+        <div data-delay="20s" className={`${card.card} ${invert ? card.invert : ''} slide-in`} style={style}>
             { children }
         </div>
     );
