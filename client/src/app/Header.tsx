@@ -22,7 +22,7 @@ function Header() {
               <span style={{color: "#037244"}}>green</span>house
             </h1>
             <p className="textMedium">
-              100{" "}
+              {generateRandomNumber()}{" "}
               <span style={{color: "#037244"}}>
                 <FontAwesomeIcon icon={faEarthAmericas} />
                 <i className="fa-solid fa-earth-americas"></i>

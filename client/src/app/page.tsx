@@ -44,8 +44,8 @@ export default function Home() {
         <Card style={{ marginTop: "1rem", padding: "0.75rem 1rem" }}>
             <div className="inline">
                 <div>
-                    <h1 className="textBig">43 kWh</h1>
-                    <h3 className="altText textMedium" style={{ marginTop: ".5rem" }}>30% less than last week</h3>
+                    <h1 className="textBig">{totalKWh.toFixed(1)} kWh</h1>
+                    <h3 className="altText textMedium" style={{ marginTop: ".5rem" }}>{generateRandomValue(25, 2.23).toFixed(1)}% less than last week</h3>
                 </div>
                 <div style={{ display: "flex", justifyContent: "center", alignItems: "center", padding: "0 .5rem" }}>
                     <FontAwesomeIcon icon={faDownLong} style={{ fontSize: "3rem", color: "#037244" }} />
