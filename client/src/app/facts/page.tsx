@@ -45,8 +45,8 @@ export default function Page() {
                 <Card style={{ marginTop: "1rem" }}>
             <div className="inline" style={{ padding: "0.5rem 2rem" }}>
                 <div>
-                    <h1 style={{ fontSize: "2.5rem" }}><FontAwesomeIcon icon={faSmog}/> Electricity in CO2</h1>
-                    <h3 style={{ marginTop: "1rem" }}>In Germany, the average usage of a kilowatt hour results in the pollution of 420g of carbon dioxide.</h3>
+                    <h1 className="textBig"><FontAwesomeIcon icon={faSmog}/> Electricity in CO2</h1>
+                    <h3 className="textSmall">In Germany, the average usage of a kilowatt hour results in the pollution of 420g of carbon dioxide.</h3>
                     
                     <button className="redeem" onClick={togglePopup} style={{ marginRight: "1rem", marginTop: "1rem" }}>
                         Compare Emission
@@ -58,8 +58,8 @@ export default function Page() {
             <Card style={{ marginTop: "1rem", animationDelay: "0.3s"}}>
             <div className="inline" style={{ padding: "0.5rem 2rem" }}>
                 <div>
-                    <h1 style={{ fontSize: "2.5rem" }}><FontAwesomeIcon icon={faLightbulb}/> Lights out!</h1>
-                    <h3 style={{ marginTop: "1rem" }}>Most people leave their lights at home on, even if they're not currently in the room. Trying to 
+                    <h1 className="textBig"><FontAwesomeIcon icon={faLightbulb}/> Lights out!</h1>
+                    <h3 className="textSmall">Most people leave their lights at home on, even if they're not currently in the room. Trying to 
                     turn off useless lights can spare someone 60 watt hours with an old lightbulb and around 7 watt hours with a LED lamp.</h3>
                 </div>
             </div>
@@ -68,8 +68,8 @@ export default function Page() {
                 <Card style={{ marginTop: "1rem", animationDelay: "0.6s"}}>
             <div className="inline" style={{ padding: "0.5rem 2rem" }}>
                 <div>
-                    <h1 style={{ fontSize: "2.5rem" }}><FontAwesomeIcon icon={faArrowTrendDown}/> LED superiority</h1>
-                    <h3 style={{ marginTop: "1rem" }}>LED lamps have gotten cheaper around the last years and bring a lot of advantages with them.
+                    <h1 className="textBig"><FontAwesomeIcon icon={faArrowTrendDown}/> LED superiority</h1>
+                    <h3 className="textSmall">LED lamps have gotten cheaper around the last years and bring a lot of advantages with them.
                     Compared to oldstyle lamps they can shine brighter and waste less energy. As a bonus, their lifespan is longer than that those of
                      old style lamps. A direct upgrade!</h3>
                 </div>
@@ -80,8 +80,8 @@ export default function Page() {
             <div className="inline" style={{ padding: "0.5rem 2rem" }}>
                 <div>
                     
-                    <h1 style={{ fontSize: "2.5rem" }}><FontAwesomeIcon icon={faGaugeHigh}/> Washing smart</h1>
-                    <h3 style={{ marginTop: "1rem" }}>Washing machines will use around 0,7 kWh for one session. Trying to reduce the amount of times
+                    <h1 className="textBig"><FontAwesomeIcon icon={faGaugeHigh}/> Washing smart</h1>
+                    <h3 className="textSmall">Washing machines will use around 0,7 kWh for one session. Trying to reduce the amount of times
                      you use your washing machine by washing more clothes in one session can save around of 300g of carbon dioxide.</h3>
                 </div>
             </div>
