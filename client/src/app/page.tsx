@@ -46,7 +46,7 @@ export default function Home() {
   };
 
   const upOrDown = decideUpOrDown();
-  const colorCode = upOrDown ? "#037244" : "#f25a00";
+  const colorCode = upOrDown ? "#037244" : "#800437";
 
   return (
     <>
