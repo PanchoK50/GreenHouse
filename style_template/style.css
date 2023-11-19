@@ -2,9 +2,10 @@ body {
     margin: 0;
     
     background: rgb(36, 38, 37);
-    background: fixed linear-gradient(135deg, #a1eded 0%, #bbec9c 100%);
+    background: linear-gradient(135deg, #a1eded 0%, #bbec9c 100%);
+    background-attachment: fixed;
     
-    font-family: system-ui, Arial, Helvetica, sans-serif;
+    font-family: "Varela Round", system-ui, Arial, Helvetica, sans-serif;
 
     height: 200vh;
 }
@@ -21,6 +22,10 @@ body {
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
+}
+
+.inline.left {
+    justify-content: flex-start;
 }
 
 .header {
@@ -113,7 +118,7 @@ button.redeem {
     color: white;
 
     font-weight: bold;
-    background-color: #007f21;
+    background-color: #037244;
 
     padding: .5rem 1rem;
 
@@ -122,6 +127,24 @@ button.redeem {
 
     border-radius: 10px;
     cursor: pointer;
+}
+
+button.redeem.lock {
+    cursor: initial;
+    background: rgba(0, 0, 0, 0.5);
+
+    box-shadow: inset 0 -1px 2px rgba(64, 64, 64, 0.1),
+                inset 0 2px 4px rgba(0, 0, 0, 0.1),
+                inset 0 4px 8px rgba(0, 0, 0, 0.1),
+                inset 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.dropShadow {
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.altText {
+    color: #eeeeee;
 }
 
 /* .nav > .link:not(.active) {
@@ -136,4 +159,19 @@ button.redeem {
 
 h1, h2, h3, p {
     margin: 0;
+}
+
+h1, h2, h3, h3, a, p, span {
+    font-family: "Varela Round", system-ui, Arial, Helvetica, sans-serif;
+}
+
+.slide-in {
+    opacity: 0;
+    transform: translate(50%, 50%);
+    animation: slide-in 0.3s forwards ease-out;
+}
+
+@keyframes slide-in {
+    0% { opacity: 0; transform: translate(50%, 50%); }
+    100% { opacity: 1; transform: translate(0, 0); }
 }
