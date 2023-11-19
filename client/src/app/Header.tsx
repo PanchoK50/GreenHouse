@@ -16,20 +16,23 @@ function Header() {
 
   return (
     <>
-        <header className="header">
-          <div className="inline" style={{ padding: ".75rem 2rem" }}>
-            <h1 className="logo" style={{fontSize: "2.7rem", fontFamily: "Varela Round"}}>
-              <span style={{color: "#037244"}}>green</span>house
-            </h1>
-            <p style={{fontSize: "1.5rem"}}>
-              <span style={{color: "#037244"}}>
-              {randomBalance}{" "}
-                <FontAwesomeIcon icon={faEarthAmericas} />
-                <i className="fa-solid fa-earth-americas"></i>
-              </span>
-            </p>
-          </div>
-        </header>
+      <header className="header">
+        <div className="inline" style={{ padding: ".75rem 2rem" }}>
+          <h1
+            className="logo"
+            style={{ fontSize: "2.7rem", fontFamily: "Varela Round" }}
+          >
+            <span style={{ color: "#037244" }}>green</span>house
+          </h1>
+          <p style={{ fontSize: "1.5rem" }}>
+            {randomBalance}{" "}
+            <span style={{ color: "#037244" }}>
+              <FontAwesomeIcon icon={faEarthAmericas} />
+              <i className="fa-solid fa-earth-americas"></i>
+            </span>
+          </p>
+        </div>
+      </header>
     </>
   );
 }
