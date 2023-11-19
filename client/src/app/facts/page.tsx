@@ -48,9 +48,9 @@ export default function Page() {
                         <h1 className="textBig" style={{ marginBottom: "0.75rem" }}><FontAwesomeIcon icon={faSmog} /> Electricity in CO2</h1>
                         <h3 className="textSmall">In Germany, the average usage of a kilowatt hour results in the pollution of 420g of carbon dioxide.</h3>
 
-                        <button className="redeem" onClick={togglePopup} style={{ marginRight: "1rem", marginTop: "1rem" }}>
+                        {/*<button className="redeem" onClick={togglePopup} style={{ marginRight: "1rem", marginTop: "1rem" }}>
                             Compare Emission
-                        </button>
+    </button>*/}
                     </div>
                 </div>
             </Card>
