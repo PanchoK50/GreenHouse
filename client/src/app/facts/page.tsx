@@ -59,7 +59,7 @@ export default function Page() {
             <div className="inline" style={{ padding: "0.5rem 2rem" }}>
                 <div>
                     <h1 className="textBig"><FontAwesomeIcon icon={faLightbulb}/> Lights out!</h1>
-                    <h3 className="textSmall">Most people leave their lights at home on, even if they're not currently in the room. Trying to 
+                    <h3 className="textSmall">Most people leave their lights at home on, even if they&apos;re not currently in the room. Trying to 
                     turn off useless lights can spare someone 60 watt hours with an old lightbulb and around 7 watt hours with a LED lamp.</h3>
                 </div>
             </div>
