@@ -49,7 +49,7 @@ export default function Page() {
                     <h3 style={{ marginTop: "1rem" }}>In Germany, the average usage of a kilowatt hour results in the pollution of 420g of carbon dioxide.</h3>
                     
                     <button className="redeem" onClick={togglePopup} style={{ marginRight: "1rem", marginTop: "1rem" }}>
-                        Verbrauch vergleichen
+                        Compare Emission
                     </button>
                 </div>
             </div>
@@ -65,7 +65,7 @@ export default function Page() {
             </div>
                 </Card>
 
-                <Card style={{ marginTop: "1rem" }}>
+                <Card style={{ marginTop: "1rem", animationDelay: "0.6s"}}>
             <div className="inline" style={{ padding: "0.5rem 2rem" }}>
                 <div>
                     <h1 style={{ fontSize: "2.5rem" }}><FontAwesomeIcon icon={faArrowTrendDown}/> LED superiority</h1>
@@ -76,7 +76,7 @@ export default function Page() {
             </div>
                 </Card>
 
-                <Card style={{ marginTop: "1rem" }}>
+                <Card style={{ marginTop: "1rem", animationDelay: "0.9s"}}>
             <div className="inline" style={{ padding: "0.5rem 2rem" }}>
                 <div>
                     
@@ -85,18 +85,7 @@ export default function Page() {
                      you use your washing machine by washing more clothes in one session can save around of 300g of carbon dioxide.</h3>
                 </div>
             </div>
-                </Card>          
-
-                <Card style={{ marginTop: "1rem" }}>
-            <div className="inline" style={{ padding: "0.5rem 2rem" }}>
-                <div>
-                    
-                    <h1 style={{ fontSize: "2.5rem" }}><FontAwesomeIcon icon={faGaugeHigh}/> Washing smart</h1>
-                    <h3 style={{ marginTop: "1rem" }}>Washing machines will use around 0,7 kWh for one session. Trying to reduce the amount of times
-                     you use your washing machine by washing more clothes in one session can save around of 300g of carbon dioxide.</h3>
-                </div>
-            </div>
-                </Card>      
+                </Card>             
 
             <div id="rewardsPopup" className="rewardsPopup hidden">
                 <div className="rewardsInner">
