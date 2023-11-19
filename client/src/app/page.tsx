@@ -27,7 +27,7 @@ export default function Home() {
     return data.datasets[0].data.reduce((acc, curr) => acc + curr, 0);
   }
 
-  const totalKWh: number = calculateTotalKWh(defaultData).toFixed(1);
+  const totalKWh: number = calculateTotalKWh(defaultData);
   interface ChartData {
     labels: string[];
     datasets: {
@@ -44,7 +44,7 @@ export default function Home() {
         <Card style={{ marginTop: "1rem" }}>
             <div className="inline" style={{ padding: "0.5rem 2rem" }}>
                 <div>
-                    <h1 style={{ fontSize: "2.5rem" }}>{totalKWh} kWh</h1>
+                    <h1 style={{ fontSize: "2.5rem" }}>{totalKWh.toFixed(1)} kWh</h1>
                     <h3 className="altText" style={{ marginTop: ".5rem" }}>{generateRandomValue(25, 2.34).toFixed(1)}% less than last week</h3>
                 </div>
                 <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
