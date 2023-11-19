@@ -88,7 +88,7 @@ interface ChartData {
 function EnergyChart({ data }: { data: ChartData }) {
   return (
     <>
-      <Card invert={true} style={{ height: "12rem", animation: "none", opacity: 1, transform: "initial" }}>
+      <Card invert={true} style={{ height: "12rem", animation: "none", opacity: 1 }}>
         <Line id="chart" data={data} options={options} />
       </Card>
     </>
