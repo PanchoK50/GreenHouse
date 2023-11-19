@@ -11,6 +11,7 @@ function Header() {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
 
+
   const randomBalance = generateRandomNumber();
   // Generate the initial random number on component mount
 
@@ -22,7 +23,7 @@ function Header() {
               <span style={{color: "#037244"}}>green</span>house
             </h1>
             <p className="textMedium">
-              {generateRandomNumber()}{" "}
+              113{" "}
               <span style={{color: "#037244"}}>
                 <FontAwesomeIcon icon={faEarthAmericas} />
                 <i className="fa-solid fa-earth-americas"></i>

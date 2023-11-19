@@ -1,7 +1,7 @@
 import EnergyChart from "./EnergyChart";
 import Card from "@/components/Card";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDownLong } from "@fortawesome/free-solid-svg-icons";
+import { faDownLong, faUpLong } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   function generateRandomValue(baseValue: number, deviation: number) {
@@ -16,7 +16,7 @@ export default function Home() {
     datasets: [
       {
         // data: [12, 19, 15, 16, 20, 13, 17],
-        data: Array.from({ length: 7 }, () => generateRandomValue(15, 4.67)),
+        data: Array.from({ length: 7 }, () => generateRandomValue(5, 1.67)),
         borderWidth: 3,
         borderColor: "#18ad3b",
       },
@@ -37,6 +37,17 @@ export default function Home() {
     }[];
   }
 
+  const decideUpOrDown = () : boolean => {
+    //70% down and 30% up
+    const min = 1;
+    const max = 10;
+    const random = Math.floor(Math.random() * (max - min + 1)) + min;
+    return random <= 7;
+  };
+
+  const upOrDown = decideUpOrDown();
+  const colorCode = upOrDown ? "#037244" : "#f25a00";
+
   return (
     <>
         <EnergyChart data={defaultData} />
@@ -45,10 +56,10 @@ export default function Home() {
             <div className="inline">
                 <div>
                     <h1 className="textBig">{totalKWh.toFixed(1)} kWh</h1>
-                    <h3 className="altText textMedium" style={{ marginTop: ".5rem" }}>{generateRandomValue(25, 2.23).toFixed(1)}% less than last week</h3>
+                    <h3 className="altText textMedium" style={{ marginTop: ".5rem" }}>{generateRandomValue(7, 2.23).toFixed(1)}% {upOrDown ? "less" : "more"} than last week</h3>
                 </div>
                 <div style={{ display: "flex", justifyContent: "center", alignItems: "center", padding: "0 .5rem" }}>
-                    <FontAwesomeIcon icon={faDownLong} style={{ fontSize: "3rem", color: "#037244" }} />
+                    <FontAwesomeIcon icon={upOrDown ? faDownLong : faUpLong} style={{ fontSize: "3rem", color: colorCode }} />
                 </div>
             </div>
         </Card>
