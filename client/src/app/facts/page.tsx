@@ -104,17 +104,19 @@ export default function Page() {
                     <div>
                           <Bar
                             data={{
-                              labels: ["1 year of lights", "washing machine", "charging smartphone", "Driving from Munich to Berlin", "Flight from Munich to London"],
+                              labels: ["charging smartphone after a year", "1 year of lights", "washing machine after a year", "Driving from Munich to Berlin", "Flight from Munich to London"],
                               datasets: [
                                 {
-                                  data: [15, 12, 6, 7, 4],
+                                  data: [1533, 37800, 63000, 200000, 202000],
                                   backgroundColor: ["red", "yellow", "blue", "black", "green"],
                                   borderColor: "orange",
                                   borderWidth: 5
                                 },
                               ]
                             }}
-                            
+                            options={{
+                                maintainAspectRatio: false
+                              }}
                           />
                         </div>
                         <button className="buttonClose" onClick={togglePopup}>Close</button>
