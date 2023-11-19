@@ -34,7 +34,7 @@ function CopyToClipboardButton({ text } : { text: string }) {
     }
   };
 
-  return <div onClick={handleCopyClick}>
+  return <div style={{userSelect: "none"}} onClick={handleCopyClick}>
     <div className="code">{codeToCopy}</div>
   </div>;
 }
