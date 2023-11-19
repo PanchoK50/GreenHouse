@@ -42,7 +42,7 @@ function togglePopup() {
 export default function Page() {
     return (
         <>
-                <Card style={{ marginTop: "1rem" }}>
+                <Card style={{ marginTop: "2.5rem" }}>
             <div className="inline" style={{ padding: "0.5rem 2rem" }}>
                 <div>
                     <h1 className="textBig"><FontAwesomeIcon icon={faSmog}/> Electricity in CO2</h1>
@@ -55,7 +55,7 @@ export default function Page() {
             </div>
                 </Card>           
            
-            <Card style={{ marginTop: "1rem", animationDelay: "0.3s"}}>
+            <Card style={{ marginTop: "2.5rem", animationDelay: "0.3s"}}>
             <div className="inline" style={{ padding: "0.5rem 2rem" }}>
                 <div>
                     <h1 className="textBig"><FontAwesomeIcon icon={faLightbulb}/> Lights out!</h1>
@@ -65,7 +65,7 @@ export default function Page() {
             </div>
                 </Card>
 
-                <Card style={{ marginTop: "1rem", animationDelay: "0.6s"}}>
+                <Card style={{ marginTop: "2.5rem", animationDelay: "0.6s"}}>
             <div className="inline" style={{ padding: "0.5rem 2rem" }}>
                 <div>
                     <h1 className="textBig"><FontAwesomeIcon icon={faArrowTrendDown}/> LED superiority</h1>
@@ -76,7 +76,7 @@ export default function Page() {
             </div>
                 </Card>
 
-                <Card style={{ marginTop: "1rem", animationDelay: "0.9s"}}>
+                <Card style={{ marginTop: "2.5rem", animationDelay: "0.9s"}}>
             <div className="inline" style={{ padding: "0.5rem 2rem" }}>
                 <div>
                     
