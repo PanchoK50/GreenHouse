@@ -8,20 +8,25 @@ function Navbar() {
   const router = useRouter();
 
   // Extract the initial active button from the current route
-  const initialActiveButton = (() => {
-    switch (usePathname()) {
-      case '/':
-        return 'button1';
-      case '/rewards':
-        return 'button3';
-      case '/facts':
-        return 'button4';
-      default:
-        return '';
-    }
-  })();
+  const [activeButton, setActiveButton] = useState('');
+  const pathName = usePathname();
 
-    const [activeButton, setActiveButton] = useState(initialActiveButton);
+  useEffect(() => {
+    const initialActiveButton = (() => {
+      switch (pathName) {
+        case '/':
+          return 'button1';
+        case '/rewards':
+          return 'button3';
+        case '/facts':
+          return 'button4';
+        default:
+          return '';
+      }
+    })();
+
+    setActiveButton(initialActiveButton);
+  }, [pathName]);
 
     const handleButtonClick = (buttonId: string) => {
       console.log('Button clicked: ', buttonId)
@@ -32,7 +37,6 @@ function Navbar() {
 
 
   return (
-    <>
       <div className="nav inline">
 
       <Link href="/" className={`link ${activeButton === 'button1' ? 'active' : ''}`} onClick={() => handleButtonClick('button1')}>
@@ -52,7 +56,6 @@ function Navbar() {
       </Link>
     
       </div>
-    </>
   );
 }
 
