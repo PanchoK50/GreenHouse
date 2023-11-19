@@ -55,7 +55,7 @@ export default function Home() {
     const numbers = [
       calculateCoffeeCups(percentage).toFixed(0),
       percentage.toFixed(0),
-      (percentage / 0.0142).toFixed(0),
+      percentage.toFixed(0),
     ]
     return numbers[index%3];
   };
