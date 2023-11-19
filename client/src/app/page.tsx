@@ -18,7 +18,7 @@ export default function Home() {
         // data: [12, 19, 15, 16, 20, 13, 17],
         data: Array.from({ length: 7 }, () => generateRandomValue(5, 1.67)),
         borderWidth: 3,
-        borderColor: "#18ad3b",
+        borderColor: "#037244",
       },
     ],
   };
