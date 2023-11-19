@@ -2,10 +2,24 @@ body {
     margin: 0;
     
     background: rgb(36, 38, 37);
-    background: linear-gradient(135deg, #a1eded 0%, #bbec9c 100%);
-    background-attachment: fixed;
     
     font-family: "Varela Round", system-ui, Arial, Helvetica, sans-serif;
+
+    padding-bottom: 2rem;
+}
+
+body::before {
+    position: fixed;
+    content: "";
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    z-index: -1;
+
+    background: linear-gradient(135deg, #a1eded 0%, #bbec9c 100%) fixed;
 }
 
 .container {
