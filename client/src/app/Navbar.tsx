@@ -1,16 +1,35 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
+import { usePathname, useRouter } from 'next/navigation'
 
 function Navbar() {
 
-    const [activeButton, setActiveButton] = useState('button1');
+  const router = useRouter();
+
+  // Extract the initial active button from the current route
+  const initialActiveButton = (() => {
+    switch (usePathname()) {
+      case '/':
+        return 'button1';
+      case '/rewards':
+        return 'button3';
+      case '/facts':
+        return 'button4';
+      default:
+        return '';
+    }
+  })();
+
+    const [activeButton, setActiveButton] = useState(initialActiveButton);
 
     const handleButtonClick = (buttonId: string) => {
       console.log('Button clicked: ', buttonId)
       setActiveButton(buttonId);
       // You can perform additional actions when a button is clicked
     };
+
+
 
   return (
     <>
