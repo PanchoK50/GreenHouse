@@ -1,7 +1,8 @@
 import EnergyChart from "./EnergyChart";
 import Card from "@/components/Card";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDownLong, faUpLong } from "@fortawesome/free-solid-svg-icons";
+import { faCoffee, faDownLong, faTshirt, faUpLong, faUtensils } from "@fortawesome/free-solid-svg-icons";
+import { info } from "console";
 
 export default function Home() {
   function generateRandomValue(baseValue: number, deviation: number) {
@@ -28,6 +29,10 @@ export default function Home() {
   }
 
   const totalKWh: number = calculateTotalKWh(defaultData);
+
+  function calculateCoffeeCups(totalKWh: number): number {
+    return totalKWh / 0.0142;
+  }
   interface ChartData {
     labels: string[];
     datasets: {
@@ -36,6 +41,36 @@ export default function Home() {
       borderColor: string;
     }[];
   }
+
+  function getInfoText(index: number): string {
+    const infoTexts = [
+      "Cups of coffee!",
+      "Running Washing machines!",
+      "Meals for 4 persons!",
+    ]
+    return infoTexts[index%3];
+  };
+
+  function getNumberForInfo(index: number): string {
+    const numbers = [
+      calculateCoffeeCups(percentage).toFixed(0),
+      percentage.toFixed(0),
+      (percentage / 0.0142).toFixed(0),
+    ]
+    return numbers[index%3];
+  };
+
+  function getIconForInfo(index: number) {
+    const icons = [
+      faCoffee,
+      faTshirt,
+      faUtensils,
+    ]
+    const icon = icons[index%3];
+    return <FontAwesomeIcon icon={icon} style={{ fontSize: "3rem", }} />;
+  };
+
+  const infoIndex = Math.floor(Math.random() * 3);
 
   const decideUpOrDown = () : boolean => {
     //70% down and 30% up
@@ -47,6 +82,7 @@ export default function Home() {
 
   const upOrDown = decideUpOrDown();
   const colorCode = upOrDown ? "#037244" : "#800437";
+  const percentage = generateRandomValue(7, 2.23);
 
   return (
     <>
@@ -56,7 +92,7 @@ export default function Home() {
             <div className="inline">
                 <div>
                     <h1 className="textBig">{totalKWh.toFixed(1)} kWh</h1>
-                    <h3 className="altText textMedium" style={{ marginTop: ".5rem" }}>{generateRandomValue(7, 2.23).toFixed(1)}% {upOrDown ? "less" : "more"} than last week</h3>
+                    <h3 className="altText textMedium" style={{ marginTop: ".5rem" }}>{percentage.toFixed(1)}% {upOrDown ? "less" : "more"} than last week</h3>
                 </div>
                 <div style={{ display: "flex", justifyContent: "center", alignItems: "center", padding: "0 .5rem" }}>
                     <FontAwesomeIcon icon={upOrDown ? faDownLong : faUpLong} style={{ fontSize: "3rem", color: colorCode }} />
@@ -64,15 +100,23 @@ export default function Home() {
             </div>
         </Card>
 
-        {/*<Card style={{ marginTop: "2rem", padding: "0.75rem 1rem", animationDelay: ".3s" }}>
-            <h1>Tip of the day:</h1>
-            <div className="inline" style={{ alignItems: "stretch", marginTop: "1rem" }}>
+        <Card style={{ marginTop: "2rem", padding: "0.75rem 1rem", animationDelay: ".3s" }}>
+          <div className="inline">
+                <div>
+                    <h1 className="textBig">{getNumberForInfo(infoIndex)}</h1>
+                    <h3 className="altText textMedium" style={{ marginTop: ".5rem" }}>{getInfoText(infoIndex)}</h3>
+                </div>
+                <div style={{ display: "flex", justifyContent: "center", alignItems: "center", padding: "0 .5rem" }}>
+                  {getIconForInfo(infoIndex)}
+                </div>
+          </div>
+{/*             <div className="inline" style={{ alignItems: "stretch", marginTop: "1rem" }}>
                 <img src="/tree.svg" alt="Tree" style={{ width: "6rem" }} />
                 <div style={{height: "100%"}} >
                     <h2>Hello World!</h2>
                 </div>
-            </div>
-        </Card>*/}
+            </div> */}
+        </Card>
     </>
   );
 }
